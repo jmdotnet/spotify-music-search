@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Jmdotnet.MusicSearch.SpotifyWrapper
 {
-    public class SpotifyWebAPI
+    public class SpotifyWebAPI : ISpotifyWebAPI
     {
         private string _token;
         private string _baseUrl = "https://api.spotify.com/v1/";
@@ -21,13 +21,13 @@ namespace Jmdotnet.MusicSearch.SpotifyWrapper
         {
             return await _baseUrl.AppendPathSegment("search")
                     .WithOAuthBearerToken(_token)
-                    .SetQueryParams(new { 
-                                            q = query,
-                                            type = $"{SearchType.album},{SearchType.artist},{SearchType.playlist},{SearchType.track}",
-                                            limit = limit,
-                                            offset = offset 
-                                        }).GetJsonAsync<SearchItem>();
-
+                    .SetQueryParams(new
+                    {
+                        q = query,
+                        type = $"{SearchType.album},{SearchType.artist},{SearchType.playlist},{SearchType.track}",
+                        limit = limit,
+                        offset = offset
+                    }).GetJsonAsync<SearchItem>();
         }
 
 

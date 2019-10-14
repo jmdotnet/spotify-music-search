@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Jmdotnet.MusicSearch.Service;
+using Jmdotnet.MusicSearch.SpotifyWrapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,6 +28,13 @@ namespace Jmdotnet.MusicSearch.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            var auth = AuthenticationManager
+                            .GetToken(new AuthenticationConfig("5eb90c111ca843f8ab790569f39c077d", "3abeddabe063405db9280068cf8dee76", " https://accounts.spotify.com/api/token")).Result;
+            
+           services.AddScoped<ISpotifyWebAPI>(x => new SpotifyWebAPI(auth.access_token));
+           services.AddScoped<ISearchService, SearchService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,5 +56,7 @@ namespace Jmdotnet.MusicSearch.Api
                 endpoints.MapControllers();
             });
         }
+
+       
     }
 }

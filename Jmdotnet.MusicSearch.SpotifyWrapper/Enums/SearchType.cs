@@ -10,7 +10,6 @@ namespace Jmdotnet.MusicSearch.SpotifyWrapper.Enums
         artist = 1,
         album = 2,
         track = 4,
-        playlist = 8,
-        all = 16
+        playlist = 8
     }
 }
