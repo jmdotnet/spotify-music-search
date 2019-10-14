@@ -25,6 +25,11 @@ namespace Jmdotnet.MusicSearch.Api.Controllers
         public async Task<IActionResult> Get(string query)
         {
 
+            if (string.IsNullOrEmpty(query))
+            {
+                return BadRequest();
+            }
+
             var result = await _searchService.Search(query);
 
             return Ok(result);
