@@ -1,5 +1,5 @@
 # spotify-music-search
-An example of Spotify Web API app built with .Net Core and Angular 8
+An example of Spotify Web API app built with .Net Core 3.0 and Angular 8
 
 
 # Getting started
