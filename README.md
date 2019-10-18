@@ -1,6 +1,5 @@
 # spotify-music-search
-An example of Spotify Web API app built with .Net Core 3.0 and Angular 8
-
+A demo music search app built with .Net Core 3.0, Angular 8 and Spotify Web API
 
 # Getting started
 
