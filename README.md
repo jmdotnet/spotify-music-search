@@ -12,13 +12,13 @@ Select ASP.NET & web development workloads during the install steps.
 
 Note: VS2019 includes .Net Core 3.0 https://dotnet.microsoft.com/download/dotnet-core/3.0
 
-# Node.js ([link](https://nodejs.org/en/))
+## Node.js ([link](https://nodejs.org/en/))
 
 Once Node is installed open a command prompt and go to root of Jmdotnet.MusicSearch.UI project and run the following command to install node dependencies:
 
     npm install
         
-# Spotify's Web API ([link](https://developer.spotify.com/web-api/))
+## Spotify's Web API ([link](https://developer.spotify.com/web-api/))
 
 To use the Web API, start by creating a Spotify user account (Premium or Free). To do that, simply sign up at www.spotify.com.
 
@@ -27,4 +27,4 @@ When you have a user account, go to the Dashboard page at the Spotify Developer 
 Obtain Client Id and Client secret from Spotify Dashboard
 
 
-# Getting started
+## Getting started
