@@ -17,6 +17,11 @@ Note: VS2019 includes .Net Core 3.0 https://dotnet.microsoft.com/download/dotnet
 Once Node is installed open a command prompt and go to root of MusicSearch.UI and run the following command to install node dependencies:
 
     npm install
+    
+## Angular CLI ([link](https://cli.angular.io))
+
+npm install -g @angular/cli
+    
         
 ## Spotify's Web API ([link](https://developer.spotify.com/web-api/))
 
@@ -31,7 +36,19 @@ Obtain Client Id and Client secret from Spotify Dashboard
 Update appsettings.json
 
 {
- "spotify-client-id": "SPOTIFY CLIENT ID",
-  "spotify-client-secret": "SPOTIFY CLIENT SECRET"
-
+ "spotify-client-id": "",
+  "spotify-client-secret": ""
 }
+
+# To Build / Run Locally
+
+1. Launch Visual Studio and F5 Debug API App
+
+2. Open a command prompt and go to root of Jmdotnet.MusicSearch.UI and run:
+
+   ng serve
+
+
+
+
+
