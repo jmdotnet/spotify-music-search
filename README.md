@@ -1,6 +1,8 @@
 # spotify-music-search
 A demo music search app built with .Net Core 3.0, Angular 8 and Spotify Web API
 
+Demo: https://jmdotnetmusicsearchdemo.azurewebsites.net/
+
 # Getting started
 
 Install the following dependencies on your machine and sign up for a Spotify Web API account.  
