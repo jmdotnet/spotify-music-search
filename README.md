@@ -26,3 +26,12 @@ When you have a user account, go to the Dashboard page at the Spotify Developer 
 
 Obtain Client Id and Client secret from Spotify Dashboard
 
+## Add Spotify Client Id and Client Secret to API App settings
+
+Update appsettings.json
+
+{
+ "spotify-client-id": "SPOTIFY CLIENT ID",
+  "spotify-client-secret": "SPOTIFY CLIENT SECRET"
+
+}
