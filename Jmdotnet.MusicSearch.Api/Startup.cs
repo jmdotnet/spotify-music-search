@@ -31,8 +31,7 @@ namespace Jmdotnet.MusicSearch.Api
             services.AddControllers();
 
             var auth = AuthenticationManager
-                            .GetToken(new AuthenticationConfig("5eb90c111ca843f8ab790569f39c077d", "3abeddabe063405db9280068cf8dee76", " https://accounts.spotify.com/api/token")).Result;
-            
+                              .GetToken(new AuthenticationConfig(Configuration["spotify-client-id"], Configuration["spotify-client-secret"], " https://accounts.spotify.com/api/token")).Result;            
 
            services.AddScoped<ISpotifyWebAPI>(x => new SpotifyWebAPI(auth.access_token));
            services.AddScoped<ISearchService, SearchService>();
