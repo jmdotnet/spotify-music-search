@@ -27,11 +27,13 @@ namespace Jmdotnet.MusicSearch.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
             services.AddControllers();
 
             var auth = AuthenticationManager
                             .GetToken(new AuthenticationConfig("5eb90c111ca843f8ab790569f39c077d", "3abeddabe063405db9280068cf8dee76", " https://accounts.spotify.com/api/token")).Result;
             
+
            services.AddScoped<ISpotifyWebAPI>(x => new SpotifyWebAPI(auth.access_token));
            services.AddScoped<ISearchService, SearchService>();
 
@@ -44,6 +46,10 @@ namespace Jmdotnet.MusicSearch.Api
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors(
+       options => options.WithOrigins("*").AllowAnyMethod()
+   );
 
             app.UseHttpsRedirection();
 

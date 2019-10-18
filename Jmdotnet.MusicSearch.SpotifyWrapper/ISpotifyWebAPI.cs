@@ -5,6 +5,6 @@ namespace Jmdotnet.MusicSearch.SpotifyWrapper
 {
     public interface ISpotifyWebAPI
     {
-        Task<SearchItem> SearchAllTypes(string query, int limit = 20, int offset = 0);
+        Task<SearchItem> SearchAllTypes(string query, int limit = 50, int offset = 0);
     }
 }

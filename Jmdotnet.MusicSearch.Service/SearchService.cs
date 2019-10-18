@@ -1,5 +1,6 @@
 ﻿using Jmdotnet.MusicSearch.Domain;
 using Jmdotnet.MusicSearch.SpotifyWrapper;
+using Jmdotnet.MusicSearch.SpotifyWrapper.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +23,20 @@ namespace Jmdotnet.MusicSearch.Service
 
             var spotifySearchResult = await _spotifyWebAPI.SearchAllTypes(query);
 
-            return spotifySearchResult.Artists.Items.Select(x => new SearchResult(x.Name)).ToList();
+            return spotifySearchResult.Albums.Items.Select(x => new SearchResult(x.Name, mapToDomainImage(x.Images), Domain.Enums.SearchType.artist)).OrderBy(c => c.Name).ToList();
+        }
+
+        private List<Domain.Image> mapToDomainImage(List<SpotifyWrapper.Models.Image> images)
+        {
+            var mapped = new List<Domain.Image>();
+
+            images.ForEach(image => {
+
+                mapped.Add(new Domain.Image(image.Url, image.Width, image.Height));
+
+            });
+
+            return mapped;
         }
     }
 }

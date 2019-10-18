@@ -1,0 +1,48 @@
+<form class="search-form">
+  <mat-form-field class="search-input">
+    <input
+      [(ngModel)]="query"
+      name="query"
+      matInput
+      placeholder="Search by Album or Artist"
+      type="text"
+      (keyUp.enter)="search()"
+    />
+  </mat-form-field>
+  <button
+    button="submit"
+    class="btn"
+    mat-raised-button
+    color="primary"
+    (click)="search()"
+  >
+    Search
+  </button>
+</form>
+
+<div *ngFor="let result of results">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="group-label">{{ result.group }}</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div
+      *ngFor="let item of result.items"
+      class="col-xl-2 col-md-4 col-sm-6"
+      style="margin-bottom:30px;"
+    >
+      <div class="card">
+        <img
+          [src]="item.images[1] ? item.images[1].url : ''"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <p class="card-text">{{ item.name }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

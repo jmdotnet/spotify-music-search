@@ -17,14 +17,14 @@ namespace Jmdotnet.MusicSearch.SpotifyWrapper
             _token = token;
         }
 
-        public async Task<SearchItem> SearchAllTypes(string query, int limit = 20, int offset = 0)
+        public async Task<SearchItem> SearchAllTypes(string query, int limit = 50, int offset = 0)
         {
             return await _baseUrl.AppendPathSegment("search")
                     .WithOAuthBearerToken(_token)
                     .SetQueryParams(new
                     {
                         q = query,
-                        type = $"{SearchType.album},{SearchType.artist},{SearchType.playlist},{SearchType.track}",
+                        type = $"{SearchType.album},{SearchType.artist}",
                         limit = limit,
                         offset = offset
                     }).GetJsonAsync<SearchItem>();
