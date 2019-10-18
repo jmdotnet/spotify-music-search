@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/82481092-0fea-4ca0-8863-407e17a30fb9/resourceGroups/appsvc_windows_centralus/providers/Microsoft.Web/sites/jmdotnet-musicsearch-demo",
+    "appService.deploySubpath": ""
+}
