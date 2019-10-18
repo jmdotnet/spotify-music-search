@@ -14,7 +14,7 @@ Note: VS2019 includes .Net Core 3.0 https://dotnet.microsoft.com/download/dotnet
 
 ## Node.js ([link](https://nodejs.org/en/))
 
-Once Node is installed open a command prompt and go to root of MusicSearch.UI project and run the following command to install node dependencies:
+Once Node is installed open a command prompt and go to root of MusicSearch.UI and run the following command to install node dependencies:
 
     npm install
         
