@@ -44,7 +44,7 @@ Update appsettings.json
 
 1. Launch Visual Studio and F5 Debug API App
 
-2. Open a command prompt and go to root of Jmdotnet.MusicSearch.UI and run:
+2. Open a command prompt and go to root of UI app and run the following:
 
    ng serve
 
