@@ -1,5 +1,5 @@
 # spotify-music-search
-An example of Spotify Web API app built with .Net Core and Angular 8
+An example of Spotify Web API app built with .Net Core 3.0 and Angular 8
 
 
 # Getting started
@@ -17,6 +17,11 @@ Note: VS2019 includes .Net Core 3.0 https://dotnet.microsoft.com/download/dotnet
 Once Node is installed open a command prompt and go to root of MusicSearch.UI and run the following command to install node dependencies:
 
     npm install
+    
+## Angular CLI ([link](https://cli.angular.io))
+
+npm install -g @angular/cli
+    
         
 ## Spotify's Web API ([link](https://developer.spotify.com/web-api/))
 
@@ -25,4 +30,25 @@ To use the Web API, start by creating a Spotify user account (Premium or Free). 
 When you have a user account, go to the Dashboard page at the Spotify Developer website and, if necessary, log in. Accept the latest Developer Terms of Service to complete your account set up.
 
 Obtain Client Id and Client secret from Spotify Dashboard
+
+## Add Spotify Client Id and Client Secret to API App settings
+
+Update appsettings.json
+
+{
+ "spotify-client-id": "",
+  "spotify-client-secret": ""
+}
+
+# To Build / Run Locally
+
+1. Launch Visual Studio and F5 Debug API App
+
+2. Open a command prompt and go to root of UI app and run the following:
+
+   ng serve
+
+
+
+
 
