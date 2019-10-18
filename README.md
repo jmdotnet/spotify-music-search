@@ -4,7 +4,7 @@ An example of Spotify Web API app built with .Net Core and Angular 8
 
 # Getting started
 
-Before you can build this project, you must install and configure the following dependencies on your machine:
+Install the following dependencies on your machine and sign up for a Spotify Web API account.  
 
 ## Visual Studio 2019 (Community, Professional or Enterprise) ([link](https://visualstudio.microsoft.com/vs/))
 
@@ -26,5 +26,3 @@ When you have a user account, go to the Dashboard page at the Spotify Developer 
 
 Obtain Client Id and Client secret from Spotify Dashboard
 
-
-## Getting started
