@@ -6,7 +6,7 @@ An example of Spotify Web API app built with .Net Core and Angular 8
 
 Before you can build this project, you must install and configure the following dependencies on your machine:
 
-# Visual Studio 2019 (Community, Professional or Enterprise) ([link](https://visualstudio.microsoft.com/vs/))
+## Visual Studio 2019 (Community, Professional or Enterprise) ([link](https://visualstudio.microsoft.com/vs/))
 
 Select ASP.NET & web development workloads during the install steps.  
 
